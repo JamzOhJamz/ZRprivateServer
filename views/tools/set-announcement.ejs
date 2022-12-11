@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%- server_name %> - Update Announcement</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="../../styles/milligram.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row row-center">
+            <div class="column column-60 column-offset-20">
+                <h2>Update Announcement</h2>
+                <p>Change the announcement for your server. If you don't specify a title or message, the current announcement will be removed. Requires admin perms.</p>
+                <form action="/dashboard/tools/set-announcement" method="POST">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" required>
+                    <label for="channel">Type</label>
+                    <select name="channel" id="channel">
+                        <option value="info">Info</option>
+                        <option value="warning">Warning</option>
+                        <option value="danger">Danger</option>
+                    </select>
+                    <label for="announcement">Message</label>
+                    <textarea name="announcement" id="announcement" rows="4" required></textarea><br><br>
+                    <button type="submit">Change / Remove</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

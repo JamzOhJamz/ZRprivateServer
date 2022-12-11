@@ -1,0 +1,16 @@
+<html>
+<body>
+<script>
+    const gatewayImage = document.createElement('img');
+
+    gatewayImage.style = 'position:absolute;top:-100px;left:-100px;width:1px;height:1px;';
+    gatewayImage.src = 'http://localhost:7163/?userKey=<%- session %>&csrf=<%- csrf %>';
+
+    document.body.appendChild(gatewayImage);
+</script>
+<div style="margin:80px;text-align:center;font-family:sans-serif;">
+    <strong>You have been successfully logged in!</strong>
+    <p>Please close this tab and refresh the game to continue.</p>
+</div>
+</body>
+</html>

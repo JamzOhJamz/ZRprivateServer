@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%- server_name %> - Tools</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="../styles/milligram.css">
+</head>
+<body>
+
+<div class="container" style="text-align: center;">
+  <div class="row row-center">
+    <div class="column column-60 column-offset-20">
+  <h2>Tools</h2>
+  <h4>Administration</h4>
+  <button class="button" onclick="window.location.href='/dashboard/tools/set-announcement'">Update Announcement</button>
+  <button class="button" onclick="window.location.href='/dashboard/tools/set-maintenance'">Set Maintenance</button>
+  <br><br>
+  <p>Signed in as <b><%- username %></b><br><a href="/dashboard/logout">Logout</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
