@@ -26,7 +26,6 @@ $ npm install zr-private-server
 const { ApiServer } = require('zr-private-server');
 
 // Initialize an API server
-const port = 3031;
 const server = new ApiServer({
     name: 'My Example ZRPS',
     database: {
@@ -39,24 +38,16 @@ const server = new ApiServer({
 
 // Optionally subscribe to events
 server.events.on('started', () => {
-    console.log('Server started on port ' + port);
+    console.log('Server started on port 3031');
 });
 
 // Start the server
-server.start(port);
+server.start(3031);
 ```
 
 ## Features
 
-#### Done
-N/A
-
-#### In Progress
 - ``ApiServer`` is a drop-in replacement for the ZombsRoyale.io API.
-
-#### Planned
-- ``MasonServer`` is a [Socket.IO](https://socket.io/) server used for matchmaking and real-time updates (such as friend requests).
-- ``LobbyServer`` is an attempted recreation of ZombsRoyale.io's game servers.
 
 ## Disclaimer (Legal Stuff)
 This private server is intended for educational use only. It is not intended for commercial use or for use in a production environment. The information and materials provided on this server are for general informational purposes only. We do not guarantee the accuracy, completeness, or timeliness of the information or materials provided on this server. By using this server, you acknowledge that you are solely responsible for your actions and any consequences that may result from your use of the information or materials provided on this server. We are not liable for any loss or damage that may result from your use of this server or the information or materials provided on this server.
