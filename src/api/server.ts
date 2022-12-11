@@ -36,10 +36,10 @@ export class ApiServer {
 
     private async connectToDatabase() {
         this.connection = await mysql.createConnection({
-            user: this.options.database_user,
-            password: this.options.database_password,
-            host: this.options.database_url,
-            port: this.options.database_port,
+            user: this.options.database.user,
+            password: this.options.database.password,
+            host: this.options.database.url,
+            port: this.options.database.port,
             database: "zombsroyale"
         });
         this.app.set('connection', this.connection);
@@ -55,9 +55,13 @@ export class ApiServer {
 }
 
 interface ApiServerOptions {
-    server_name?: string;
-    database_url: string;
-    database_port: number;
-    database_user: string;
-    database_password: string;
+    name?: string;
+    database: ApiServerDatabaseOptions;
+}
+
+interface ApiServerDatabaseOptions {
+    url: string;
+    port: number;
+    user: string;
+    password: string;
 }

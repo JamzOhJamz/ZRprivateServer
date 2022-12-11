@@ -1,8 +1,8 @@
 {
   "name": "zr-private-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "ZombsRoyale.io private server for Node.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

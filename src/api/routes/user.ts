@@ -12,7 +12,7 @@ userRouter.get('/user/login/:provider', (req, res) => {
 // Show login page
 userRouter.get('/user/login', (req, res) => {
     const server = req.app.get('server');
-    res.render('login', { server_name: server.options.server_name });
+    res.render('login', { server_name: server.options.name });
 });
 
 // Submit login form
