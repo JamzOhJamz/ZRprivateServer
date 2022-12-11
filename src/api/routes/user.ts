@@ -51,6 +51,12 @@ userRouter.get('/user/validate', async (req, res) => {
 
 // Get user from key
 userRouter.get('/api/user/:userKey', async (req, res) => {
+    const response: ApiGetUserResponse = {
+        status: 'error',
+        message: 'The supplied key has expired'
+    };
+    return res.json(response);
+    /*
     const db = await req.app.get('connection');
     const [rows] = await db.execute('SELECT * FROM users WHERE id = (SELECT user_id FROM sessions WHERE guid = ?)', [req.params.userKey]);
     if (rows.length === 0) {
@@ -62,4 +68,5 @@ userRouter.get('/api/user/:userKey', async (req, res) => {
     }
     const user = rows[0];
     console.log(user);
+    */
 });
