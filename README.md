@@ -1,6 +1,8 @@
 # ZRprivateServer
 A complete suite of tools to run your own [ZombsRoyale.io](https://zombsroyale.io) private server.
 
+**NOTE:** This is for developers! To set up your own server quickly and without writing any code, check out ZRPS-Template.
+
 ## Installation
 
 This is available as a [Node.js](https://nodejs.org/en/) module available through the
